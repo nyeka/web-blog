@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3e4346;
+}
+
+a {
+  text-decoration: none;
+  color: #c6c7cb;
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  list-style: none;
+}
