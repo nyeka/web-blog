@@ -77,6 +77,7 @@ const Container = styled.div`
     flex-direction: row;
     padding: 20px 8px;
     border-radius: 19px;
+    height: fit-content;
 
     img {
       width: 120px;

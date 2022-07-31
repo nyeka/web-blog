@@ -72,4 +72,8 @@ const Container = styled.div`
       padding: 14px 29px;
     }
   }
+
+  @media screen and (max-width: 1100px) {
+    width: 90vw;
+  }
 `

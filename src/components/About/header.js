@@ -13,7 +13,7 @@ export const Header = () => {
     <>
       <Container>
         <div className="card">
-          <h2>Nyoman Eka Swardita</h2>
+          <h2>Nyoman Eka</h2>
           <div className="card-content">
             <img src={author} className="hvr-card hvr-bounce-out" />
             <div className="card-icon">
@@ -177,11 +177,12 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (min-width: 910px) and (max-width: 1100px) {
+  @media screen and (max-width: 360px) {
     width: fit-content;
   }
 
-  @media screen and (max-width: 910px) {
-    width: fit-content;
+  @media screen and (min-width: 620px) and (max-width: 1100px) {
+    width: 60vw;
+    margin: 2em;
   }
 `

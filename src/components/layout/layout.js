@@ -32,14 +32,12 @@ export const Layout = ({ children }) => {
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <link rel="preconnect" href="https://www.google.com " crossOrigin />
         <link rel="dns-prefetch" href="https://www.google.com" />
-
         <meta property="og:site_name" content={author} />
         <meta property="og:locale" content="id_ID" />
         <meta property="og:locale:alternate" content="ms_MY" />
         <meta property="og:title" content={author} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-
         <meta property="og:image:width" content="640" />
         <meta property="og:image:height" content="640" />
         <meta name="twitter:card" content="summary_large_image" />
