@@ -108,7 +108,6 @@ const Container = styled.div`
 
   .card-content {
     display: flex;
-    margin-top: 12px;
 
     img {
       width: 130px;

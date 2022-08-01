@@ -78,7 +78,7 @@ const Container = styled.div`
     li {
       font-size: 29px;
     }
-    margin-top: 20px;
+    margin-top: 2em;
     width: 90vw;
     height: 75px;
 

@@ -6,6 +6,7 @@ body {
   background-color: #3e4346;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
+  margin: 1em;
 }
 
 a {
