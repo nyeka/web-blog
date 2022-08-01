@@ -15,54 +15,26 @@ export const Header = () => {
         <div className="card">
           <h2>Nyoman Eka</h2>
           <div className="card-content">
-            <img src={author} className="hvr-card hvr-bounce-out" />
+            <img
+              src={author}
+              className="hvr-card hvr-bounce-out"
+              alt="ini gambar"
+            />
             <div className="card-icon">
               <a href="https://github.com/nyeka" target="_blank">
-                <AiOutlineGithub
-                  className="hvr-card hvr-bounce-in"
-                  style={{
-                    background: "#505558",
-                    borderRadius: "50%",
-                    width: "40px",
-                    height: "40px",
-                  }}
-                />
+                <AiOutlineGithub className="hvr-card hvr-bounce-in card-2" />
               </a>
               <a href="https://www.instagram.com/_nyomaneka/" target="_blank">
-                <BsInstagram
-                  className="hvr-card hvr-bounce-in"
-                  style={{
-                    background: "#505558",
-                    borderRadius: "50%",
-                    width: "40px",
-                    height: "40px",
-                  }}
-                />
+                <BsInstagram className="hvr-card hvr-bounce-in card-2" />
               </a>
               <a
                 href="https://www.linkedin.com/in/nyoman-eka-swardita/"
                 target="_blank"
               >
-                <AiFillLinkedin
-                  className="hvr-card hvr-bounce-in"
-                  style={{
-                    background: "#505558",
-                    borderRadius: "50%",
-                    width: "40px",
-                    height: "40px",
-                  }}
-                />
+                <AiFillLinkedin className="hvr-card hvr-bounce-in card-2" />
               </a>
               <a>
-                <AiFillTwitterCircle
-                  className="hvr-card hvr-bounce-in"
-                  style={{
-                    background: "#505558",
-                    borderRadius: "50%",
-                    width: "40px",
-                    height: "40px",
-                  }}
-                />
+                <AiFillTwitterCircle className="hvr-card hvr-bounce-in card-2" />
               </a>
             </div>
           </div>
@@ -109,6 +81,13 @@ const Container = styled.div`
   width: 100%;
   font-family: "Poppins", sans-serif;
 
+  .card-2 {
+    background: #505558;
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+  }
+
   .card-msg {
     background-color: #1d2022;
     color: #c6c7cb;
@@ -154,8 +133,32 @@ const Container = styled.div`
     }
   }
 
+  @media screen and (max-width: 368px) {
+    width: fit-content;
+
+    .card-content {
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+      }
+
+      .card-icon {
+        margin-left: 5px;
+      }
+    }
+  }
+
   @media screen and (max-width: 768px) {
-    width: max-content;
+    .card-2 {
+      height: 34px;
+    }
+
+    .card-content {
+      .card-icon {
+        gap: 5px;
+      }
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -175,10 +178,6 @@ const Container = styled.div`
     .card-msg {
       width: 100%;
     }
-  }
-
-  @media screen and (max-width: 360px) {
-    width: fit-content;
   }
 
   @media screen and (min-width: 620px) and (max-width: 1100px) {

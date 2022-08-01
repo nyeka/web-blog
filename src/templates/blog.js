@@ -24,11 +24,7 @@ export const query = graphql`
 export default function Blog(props) {
   const options = {
     renderMark: {
-      [MARKS.BOLD]: text => (
-        <b className="font-bold">
-          {text}
-        </b>
-      ),
+      [MARKS.BOLD]: text => <b className="font-bold">{text}</b>,
     },
     renderNode: {
       [INLINES.HYPERLINK]: (node, children) => {
@@ -51,7 +47,9 @@ export default function Blog(props) {
   }
   return (
     <Container>
-      <Header />
+      <div className="header-contain">
+        <Header />
+      </div>
       <div className="article-section">
         <h2>{props.data.contentfulContentBlog.title}</h2>
         <p>{props.data.contentfulContentBlog.subtitle}</p>
@@ -71,8 +69,7 @@ export default function Blog(props) {
 
 const Container = styled.div`
   display: flex;
-  flex-flow: row wrap;
-  width: 100vw;
+  flex-direction: row;
   justify-content: space-around;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -81,9 +78,16 @@ const Container = styled.div`
     width: 50vw;
   }
 
+  @media screen and (max-width: 1024px) {
+    .article-section {
+      width: 100vw;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     .article-section {
       width: 100vw;
     }
+    flex-direction: column-reverse;
   }
 `

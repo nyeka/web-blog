@@ -33,7 +33,7 @@ export default function App() {
                 <div className="card" key={i}>
                   <Link to={`/${datw.node.slug}`}>
                     <div className="card-blog hvr-sink">
-                      <img src={datw.node.cover.url} />
+                      <img src={datw.node.cover.url} alt="ini gambar"/>
                       <div className="card-text">
                         <h1>{datw.node.title}</h1>
                         <p>{datw.node.date}</p>
@@ -61,7 +61,6 @@ const Container = styled.div`
 
   .blog-content {
     width: 50vw;
-
     .card {
       span {
         width: 90%;
@@ -100,7 +99,7 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 110px) {
     .blog-content {
       width: 100%;
     }
