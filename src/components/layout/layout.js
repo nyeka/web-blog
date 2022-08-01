@@ -67,12 +67,10 @@ export const Layout = ({ children }) => {
 const Container = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   .child {
     display: flex;
     flex-direction: column;
   }
-
-
 `

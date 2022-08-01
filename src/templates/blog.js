@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { Header } from "../components/About/header"
@@ -6,7 +6,7 @@ import styled from "styled-components"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 export const query = graphql`
-  query MyQuery($slug: String) {
+  query ($slug: String) {
     contentfulContentBlog(slug: { eq: $slug }) {
       title
       date(formatString: "D MMMM, YYYY")
@@ -89,5 +89,11 @@ const Container = styled.div`
       width: 100vw;
     }
     flex-direction: column-reverse;
+    h2 {
+      display: none;
+    }
+    .header-contain {
+      margin-top: 3em;
+    }
   }
 `

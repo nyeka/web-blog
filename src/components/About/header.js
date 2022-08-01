@@ -156,7 +156,7 @@ const Container = styled.div`
 
     .card-content {
       .card-icon {
-        gap: 5px;
+        gap: 9px;
       }
     }
   }
