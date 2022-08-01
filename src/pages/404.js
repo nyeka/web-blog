@@ -7,12 +7,12 @@ export default function Data() {
     <Container>
       <div className="card-found">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp7904723.png&f=1&nofb=1" />
-        <h4>You're in wrong way</h4>
-      </div>
-      <div>
-        <p>
-          <Link to="/">Go Back</Link>
-        </p>
+        <div className="card-back">
+          <h2>You're in wrong way</h2>
+          <p>
+            <Link to="/">Go Back</Link>
+          </p>
+        </div>
       </div>
     </Container>
   )
@@ -22,11 +22,29 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
 
   .card-found {
     color: white;
     img {
-      width: 70%;
+      width: 720px;
+      border-radius: 10px;
     }
+  }
+
+  @media screen and (max-width: 568px) {
+    .card-found {
+      img {
+        width: 330px;
+      }
+    }
+  }
+
+  .card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 `

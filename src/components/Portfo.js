@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
@@ -7,12 +8,14 @@ export default function Portfo(props) {
       {props.data.allContentfulPortfolio.edges.map((datw, i) => {
         return (
           <div key={i} className="card-port">
-            <img src={datw.node.cover.url} alt="ini gambar" />
-            <div className="card-text">
-              <h3>{datw.node.title}</h3>
-              <p>{datw.node.subtitle}</p>
-              <li>{datw.node.tech}</li>
-            </div>
+            <Link to={datw.node.link} target="_blank">
+              <img src={datw.node.cover.url} alt="ini gambar" />
+              <div className="card-text">
+                <h3>{datw.node.title}</h3>
+                <p>{datw.node.subtitle}</p>
+                <li>{datw.node.tech}</li>
+              </div>
+            </Link>
           </div>
         )
       })}

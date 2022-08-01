@@ -12,6 +12,7 @@ export default function Portfolio() {
             title
             tech
             subtitle
+            link
             cover {
               url
             }
