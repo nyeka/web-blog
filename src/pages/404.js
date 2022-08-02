@@ -1,10 +1,14 @@
 import { Link } from "gatsby"
 import React from "react"
+import { Helmet } from "react-helmet"
 import styled from "styled-components"
 
 export default function Data() {
   return (
     <Container>
+      <Helmet>
+        <title>Not Found</title>
+      </Helmet>
       <div className="card-found">
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp7904723.png&f=1&nofb=1" />
         <div className="card-back">
@@ -25,6 +29,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   text-align: center;
+  overflow: hidden;
 
   .card-found {
     color: white;

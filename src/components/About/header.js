@@ -80,7 +80,6 @@ const Container = styled.div`
   width: 100%;
 
   .card-2 {
-    background: #505558;
     width: 30px;
     border-radius: 50%;
     height: 30px;
