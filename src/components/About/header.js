@@ -83,9 +83,9 @@ const Container = styled.div`
 
   .card-2 {
     background: #505558;
-    width: 40px;
+    width: 30px;
     border-radius: 50%;
-    height: 40px;
+    height: 30px;
   }
 
   .card-msg {
@@ -103,6 +103,7 @@ const Container = styled.div`
 
     h2 {
       align-self: center;
+      font-weight: bold;
     }
   }
 
@@ -110,8 +111,8 @@ const Container = styled.div`
     display: flex;
 
     img {
-      width: 130px;
-      height: 130px;
+      width: 120px;
+      height: 120px;
       object-fit: cover;
       border-radius: 50%;
     }
@@ -161,7 +162,7 @@ const Container = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    width: 25vw;
+    width: 20vw;
     align-items: flex-start;
 
     .konten-desc {

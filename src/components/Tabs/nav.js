@@ -43,7 +43,7 @@ const Container = styled.div`
   .card-nav {
     width: 95vw;
     background: #505558;
-    border-radius: 30px;
+    border-radius: 40px;
     align-items: center;
     display: flex;
     justify-content: space-around;
