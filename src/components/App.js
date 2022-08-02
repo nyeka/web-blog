@@ -35,7 +35,7 @@ export default function App() {
                     <div className="card-blog hvr-sink">
                       <img src={datw.node.cover.url} alt="ini gambar" />
                       <div className="card-text">
-                        <h1>{datw.node.title}</h1>
+                        <h3>{datw.node.title}</h3>
                         <p>{datw.node.date}</p>
                         <p>{datw.node.subtitle}</p>
                       </div>
@@ -57,7 +57,6 @@ export default function App() {
 const Container = styled.div`
   display: flex;
   color: white;
-  font-family: "Poppins", sans-serif;
 
   .blog-content {
     width: 50vw;

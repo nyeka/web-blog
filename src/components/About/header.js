@@ -1,12 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import author from "../../images/author.jpeg"
-import {
-  AiOutlineGithub,
-  AiFillLinkedin,
-  AiFillTwitterCircle,
-} from "react-icons/ai"
-import { BsInstagram } from "react-icons/bs"
+import { AiFillTwitterCircle } from "react-icons/ai"
+import { TbBrandInstagram } from "react-icons/tb"
+import { VscGithubInverted } from "react-icons/vsc"
+import { TiSocialLinkedinCircular } from "react-icons/ti"
+import { Link } from "gatsby"
 
 export const Header = () => {
   return (
@@ -21,21 +20,21 @@ export const Header = () => {
               alt="ini gambar"
             />
             <div className="card-icon">
-              <a href="https://github.com/nyeka" target="_blank">
-                <AiOutlineGithub className="hvr-card hvr-bounce-in card-2" />
-              </a>
-              <a href="https://www.instagram.com/_nyomaneka/" target="_blank">
-                <BsInstagram className="hvr-card hvr-bounce-in card-2" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/nyoman-eka-swardita/"
+              <Link to="https://github.com/nyeka" target="_blank">
+                <VscGithubInverted className="hvr-card hvr-bounce-in card-2" />
+              </Link>
+              <Link to="https://www.instagram.com/_nyomaneka/" target="_blank">
+                <TbBrandInstagram className="hvr-card hvr-bounce-in card-2" />
+              </Link>
+              <Link
+                to="https://www.linkedin.com/in/nyoman-eka-swardita/"
                 target="_blank"
               >
-                <AiFillLinkedin className="hvr-card hvr-bounce-in card-2" />
-              </a>
-              <a>
+                <TiSocialLinkedinCircular className="hvr-card hvr-bounce-in card-2" />
+              </Link>
+              <Link>
                 <AiFillTwitterCircle className="hvr-card hvr-bounce-in card-2" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -44,30 +43,30 @@ export const Header = () => {
             First year Informatics Engineering student {""}
             <span>
               <u>
-                <a href="https://www.unila.ac.id" target="_blank">
+                <Link to="https://www.unila.ac.id" target="_blank">
                   Universitas Lampung
-                </a>
+                </Link>
               </u>
               .
             </span>{" "}
             Frontend developer intern {""}
             <span>
               <u>
-                <a
-                  href="https://www.tupaitech.net"
+                <Link
+                  to="https://www.tupaitech.net"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   TupaiTech
-                </a>
+                </Link>
               </u>
               .
             </span>{" "}
             Interested in Javascript ecosystem
           </p>
         </div>
-        <div className="card-msg">
-          <a href="mailto:nyeka2101@gmail.com">Say Hi!</a>
+        <div className="card-msg hvr-bounce-in">
+          <Link to="mailto:nyeka2101@gmail.com">Say Hi!</Link>
         </div>
       </Container>
     </>
@@ -79,7 +78,6 @@ const Container = styled.div`
   flex-direction: column;
   color: #e8ecef;
   width: 100%;
-  font-family: "Poppins", sans-serif;
 
   .card-2 {
     background: #505558;
@@ -103,7 +101,7 @@ const Container = styled.div`
 
     h2 {
       align-self: center;
-      font-weight: bold;
+      font-weight: 700;
     }
   }
 
@@ -119,7 +117,7 @@ const Container = styled.div`
 
     .card-icon {
       display: flex;
-      margin-left: 20px;
+      margin-left: 26px;
       flex-direction: row;
       align-items: center;
       gap: 16px;
@@ -128,8 +126,14 @@ const Container = styled.div`
 
   .konten-desc {
     text-align: center;
+    font-size: 16px;
+    font-weight: 300;
     span {
       color: #c6c7cb;
+    }
+
+    @media screen and (max-width: 348px) {
+      font-size: 13px;
     }
   }
 
