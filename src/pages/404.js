@@ -10,7 +10,6 @@ export default function Data() {
         <title>Not Found</title>
       </Helmet>
       <div className="card-found">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp7904723.png&f=1&nofb=1" />
         <div className="card-back">
           <h2>You're in wrong way</h2>
           <p>
@@ -33,18 +32,6 @@ const Container = styled.div`
 
   .card-found {
     color: white;
-    img {
-      width: 720px;
-      border-radius: 10px;
-    }
-  }
-
-  @media screen and (max-width: 568px) {
-    .card-found {
-      img {
-        width: 330px;
-      }
-    }
   }
 
   .card-back {

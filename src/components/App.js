@@ -59,7 +59,6 @@ const Container = styled.div`
   color: white;
 
   .blog-content {
-    width: 50vw;
     .card {
       span {
         width: 90%;
@@ -92,15 +91,15 @@ const Container = styled.div`
     margin-left: 20px;
   }
 
-  @media screen and (max-width: 500px) {
-    .blog-content {
-      width: fit-content;
-    }
-  }
-
   @media screen and (max-width: 110px) {
     .blog-content {
       width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .blog-content {
+      width: 52vw;
     }
   }
 `

@@ -10,11 +10,14 @@ export default function Portfolio() {
         edges {
           node {
             title
-            tech
             subtitle
             link
             cover {
               url
+            }
+            data {
+              techno
+              title
             }
           }
         }

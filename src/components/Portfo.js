@@ -13,7 +13,8 @@ export default function Portfo(props) {
               <div className="card-text">
                 <h3>{datw.node.title}</h3>
                 <p>{datw.node.subtitle}</p>
-                <li>{datw.node.tech}</li>
+                <li>{datw.node.data.title}</li>
+                <li>{datw.node.data.techno}</li>
               </div>
             </div>
           </Link>

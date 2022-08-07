@@ -69,14 +69,14 @@ const Container = styled.div`
   flex-flow: row wrap;
   justify-content: space-evenly;
 
-
   .child {
     display: flex;
     flex-direction: column;
   }
 
-
-  @media screen  and (min-width: 768px) {
-    
+  @media screen and (min-width: 1024px) {
+    .child {
+      width: 800px;
+    }
   }
 `

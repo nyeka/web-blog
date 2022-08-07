@@ -41,7 +41,8 @@ const Container = styled.div`
   align-items: center;
 
   .card-nav {
-    width: 95vw;
+    width: 900px;
+    height: 70px;
     background: #505558;
     border-radius: 40px;
     align-items: center;
@@ -68,7 +69,6 @@ const Container = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    width: 90vw;
     .card-nav {
       width: 90vw;
     }
@@ -78,38 +78,47 @@ const Container = styled.div`
     li {
       font-size: 29px;
     }
+
+    .card-nav {
+      height: 120px;
+    }
     margin-top: 2em;
-    width: 90vw;
-    height: 75px;
 
     .link-text {
       padding: 12px 33px;
     }
   }
   @media screen and (max-width: 700px) {
+    .card-nav {
+      height: 70px;
+    }
     span {
       display: none;
     }
   }
 
-  @media screen and (max-width: 398px) {
+  @media screen and (max-width: 420px) {
     .link-text {
-      padding: 8px 26px;
+      padding: 4px 30px;
     }
-    width: 95vw;
+  }
+
+  @media screen and (max-width: 398px) {
+    .card-nav {
+      height: 70px;
+    }
+    .link-text {
+      padding: 4px 28.5px;
+    }
   }
 
   @media screen and (max-width: 320px) {
     .link-text {
-      padding: 5px 14px;
+      padding: 4px 17px;
     }
     width: 100vw;
     .card-nav {
       width: 95vw;
     }
-  }
-
-  @media screen and (min-width: 1026px) {
-    width: 50vw;
   }
 `

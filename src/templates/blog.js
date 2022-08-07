@@ -129,7 +129,7 @@ export default function Blog(props) {
         <span>Dipublikasikan pada {props.data.contentfulContentBlog.date}</span>
         <img
           src={props.data.contentfulContentBlog.cover.url}
-          style={{ width: "90%" }}
+          style={{ width: "100%" }}
           alt="ini gambar"
         />
         <div>
@@ -149,7 +149,7 @@ const Container = styled.div`
   font-family: "Poppins", sans-serif;
 
   .article-section {
-    width: 49vw;
+    width: 783px;
   }
 
   @media screen and (max-width: 1024px) {
