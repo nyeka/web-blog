@@ -88,12 +88,29 @@ const Container = styled.div`
       padding: 12px 33px;
     }
   }
-  @media screen and (max-width: 700px) {
+
+  @media screen and (max-width: 773px) {
     .card-nav {
       height: 70px;
     }
+
+    .link-text {
+      padding: 5px 53px;
+    }
     span {
       display: none;
+    }
+  }
+
+  @media screen and (max-width: 545px) {
+    .link-text {
+      padding: 5px 39px;
+    }
+  }
+
+  @media screen and (max-width: 438px) {
+    .link-text {
+      padding: 5px 33px;
     }
   }
 
@@ -109,6 +126,12 @@ const Container = styled.div`
     }
     .link-text {
       padding: 4px 28.5px;
+    }
+  }
+
+  @media screen and (max-width: 368px) {
+    .link-text {
+      padding: 5px 23px;
     }
   }
 

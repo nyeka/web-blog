@@ -106,6 +106,7 @@ const Container = styled.div`
 
   .card-content {
     display: flex;
+    justify-content: space-around;
 
     img {
       width: 120px;
@@ -116,10 +117,9 @@ const Container = styled.div`
 
     .card-icon {
       display: flex;
-      margin-left: 26px;
       flex-direction: row;
       align-items: center;
-      gap: 16px;
+      gap: 9px;
     }
   }
 
@@ -167,6 +167,16 @@ const Container = styled.div`
   @media screen and (min-width: 768px) {
     width: 350px;
     align-items: flex-start;
+
+    .card-content {
+      width: 350px;
+      justify-content: space-between;
+    }
+
+    .card-2 {
+      width: 40px;
+      height: 40px;
+    }
 
     .konten-desc {
       text-align: justify;
