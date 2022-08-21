@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
@@ -7,17 +6,19 @@ export default function Portfo(props) {
     <Container>
       {props.data.allContentfulPortfolio.edges.map((datw, i) => {
         return (
-          <Link to={datw.node.link} target="_blank">
+          <a href={datw.node.link} target="_blank" key={i}>
             <div key={i} className="card-port">
               <img src={datw.node.cover.url} alt="ini gambar" />
-              <div className="card-text">
+              <div className="card-text" key={i}>
                 <h3>{datw.node.title}</h3>
                 <p>{datw.node.subtitle}</p>
-                <li>{datw.node.data.title}</li>
-                <li>{datw.node.data.techno}</li>
+                <ul>
+                  <li>{datw.node.data.title}</li>
+                  <li>{datw.node.data.techno}</li>
+                </ul>
               </div>
             </div>
-          </Link>
+          </a>
         )
       })}
     </Container>
@@ -26,6 +27,8 @@ export default function Portfo(props) {
 
 const Container = styled.div`
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   h3 {
     color: #e8ecef;
   }
@@ -37,8 +40,8 @@ const Container = styled.div`
   }
 
   img {
-    width: 420px;
-    height: 220px;
+    width: 100%;
+    height: 180px;
     object-fit: cover;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -50,23 +53,50 @@ const Container = styled.div`
     border-radius: 10px;
     margin: 2em 0;
     background-color: #505558;
-    width: fit-content;
+    width: 380px;
   }
 
   .card-text {
-    margin: 0.3em 1em;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    ul {
+      display: flex;
+      gap: 12px;
+      flex-flow: row wrap;
+
+      li {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background-color: #aeb3b7;
+          width: 100%;
+          height: 2px;
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {
-    margin: 0.3em 1em;
     img {
       width: 130px;
       height: 140px;
       border-radius: 10px;
     }
     .card-port {
-      padding: 10px;
+      width: fit-content;
       flex-direction: row;
+      background-color: transparent;
+    }
+
+    .card-text {
+      margin: 0.3em 1em;
+      padding: 0;
     }
   }
 `

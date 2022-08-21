@@ -5,7 +5,6 @@ import { AiFillTwitterCircle } from "react-icons/ai"
 import { TbBrandInstagram } from "react-icons/tb"
 import { VscGithubInverted } from "react-icons/vsc"
 import { TiSocialLinkedinCircular } from "react-icons/ti"
-import { Link } from "gatsby"
 
 export const Header = () => {
   return (
@@ -20,21 +19,21 @@ export const Header = () => {
               alt="ini gambar"
             />
             <div className="card-icon">
-              <Link to="https://github.com/nyeka" target="_blank">
+              <a href="https://github.com/nyeka" target="_blank">
                 <VscGithubInverted className="hvr-card hvr-bounce-in card-2" />
-              </Link>
-              <Link to="https://www.instagram.com/_nyomaneka/" target="_blank">
+              </a>
+              <a href="https://www.instagram.com/_nyomaneka/" target="_blank">
                 <TbBrandInstagram className="hvr-card hvr-bounce-in card-2" />
-              </Link>
-              <Link
-                to="https://www.linkedin.com/in/nyoman-eka-swardita/"
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nyoman-eka-swardita/"
                 target="_blank"
               >
                 <TiSocialLinkedinCircular className="hvr-card hvr-bounce-in card-2" />
-              </Link>
-              <Link>
+              </a>
+              <a>
                 <AiFillTwitterCircle className="hvr-card hvr-bounce-in card-2" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -43,30 +42,30 @@ export const Header = () => {
             First year Informatics Engineering student {""}
             <span>
               <u>
-                <Link to="https://www.unila.ac.id" target="_blank">
+                <a href="https://www.unila.ac.id" target="_blank">
                   Universitas Lampung
-                </Link>
+                </a>
               </u>
               .
             </span>{" "}
             Frontend developer intern {""}
             <span>
               <u>
-                <Link
-                  to="https://www.tupaitech.net"
+                <a
+                  href="https://www.tupaitech.net"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   TupaiTech
-                </Link>
+                </a>
               </u>
               .
             </span>{" "}
             Interested in Javascript ecosystem
           </p>
         </div>
-        <div className="card-msg hvr-bounce-in">
-          <Link to="mailto:nyeka2101@gmail.com">Say Hi!</Link>
+        <div className="card-msg ">
+          <a href="mailto:nyeka2101@gmail.com">Say Hi!</a>
         </div>
       </Container>
     </>
@@ -76,6 +75,7 @@ export const Header = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 24px;
   color: #e8ecef;
   width: 100%;
 
@@ -101,6 +101,7 @@ const Container = styled.div`
     h2 {
       align-self: center;
       font-weight: 700;
+      margin-bottom: 24px;
     }
   }
 
@@ -130,10 +131,6 @@ const Container = styled.div`
     span {
       color: #c6c7cb;
     }
-
-    @media screen and (max-width: 348px) {
-      font-size: 13px;
-    }
   }
 
   @media screen and (max-width: 368px) {
@@ -141,13 +138,25 @@ const Container = styled.div`
 
     .card-content {
       img {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
       }
 
       .card-icon {
         margin-left: 5px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 348px) {
+    font-size: 13px;
+
+    .card-content {
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
       }
     }
   }

@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import React from "react"
+import React, { Children } from "react"
 import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { Header } from "../components/About/header"
 import styled from "styled-components"
@@ -25,10 +25,22 @@ export const query = graphql`
 export default function Blog(props) {
   const options = {
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
-      [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
-      [BLOCKS.HEADING_2]: (node, children) => <h2>{children}</h2>,
-      [BLOCKS.HEADING_3]: (node, children) => <h3>{children}</h3>,
+      [BLOCKS.PARAGRAPH]: (node, children) => (
+        <p className="parap">{children}</p>
+      ),
+      [BLOCKS.HEADING_1]: (node, children) => (
+        <h1 className="heading-1">{children}</h1>
+      ),
+      [BLOCKS.HEADING_2]: (node, children) => (
+        <h2 className="heading-2">{children}</h2>
+      ),
+      [BLOCKS.HEADING_3]: (node, children) => (
+        <h3 className="heading-3">{children}</h3>
+      ),
+      [BLOCKS.HEADING_4]: (node, children) => (
+        <h3 className="heading-4">{children}</h3>
+      ),
+
       [INLINES.HYPERLINK]: (node, children) => (
         <a href={node.data.uri} target="_blank" rel="noreferrer">
           {children}
@@ -132,7 +144,7 @@ export default function Blog(props) {
           style={{ width: "100%" }}
           alt="ini gambar"
         />
-        <div>
+        <div className="rich-text">
           {renderRichText(props.data.contentfulContentBlog.body, options)}
         </div>
         <div>Baca Lainnya</div>
@@ -147,6 +159,10 @@ const Container = styled.div`
   justify-content: space-evenly;
   color: white;
   font-family: "Poppins", sans-serif;
+
+  .parap {
+    margin: 12px 0;
+  }
 
   .article-section {
     width: 783px;

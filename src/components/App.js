@@ -35,8 +35,8 @@ export default function App() {
                     <div className="card-blog hvr-sink">
                       <img src={datw.node.cover.url} alt="ini gambar" />
                       <div className="card-text">
-                        <h3>{datw.node.title}</h3>
                         <p>{datw.node.date}</p>
+                        <h3>{datw.node.title}</h3>
                         <p>{datw.node.subtitle}</p>
                       </div>
                     </div>
@@ -80,6 +80,7 @@ const Container = styled.div`
       width: 120px;
       height: 140px;
       border-radius: 9px;
+      object-fit: cover;
     }
 
     :hover {
@@ -89,6 +90,10 @@ const Container = styled.div`
 
   .card-text {
     margin-left: 20px;
+
+    h3 {
+      color: #fff;
+    }
   }
 
   @media screen and (max-width: 110px) {
@@ -100,6 +105,19 @@ const Container = styled.div`
   @media screen and (min-width: 1024px) {
     .blog-content {
       width: 52vw;
+    }
+
+    .card-blog {
+      img {
+        width: 220px;
+        height: 140px;
+      }
+    }
+
+    .card-text {
+      h3 {
+        font-size: 27px;
+      }
     }
   }
 `
