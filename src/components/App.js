@@ -29,6 +29,7 @@ export default function App() {
         <div className="blog-content">
           {data.allContentfulContentBlog ? (
             data.allContentfulContentBlog.edges.map((datw, i) => {
+              console.log(datw.node.title.split(" ").join("-"))
               return (
                 <div className="card" key={i}>
                   <Link to={`/${datw.node.slug}`}>

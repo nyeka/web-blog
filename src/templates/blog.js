@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import React, { Children } from "react"
+import React from "react"
 import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { Header } from "../components/About/header"
 import styled from "styled-components"

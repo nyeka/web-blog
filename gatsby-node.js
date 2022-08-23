@@ -9,6 +9,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
       allContentfulContentBlog {
         edges {
           node {
+            title
             slug
             date(formatString: "D MMMM, YYYY")
           }
