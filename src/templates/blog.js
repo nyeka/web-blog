@@ -163,7 +163,6 @@ export default function Blog(props) {
         <div className="rich-text">
           {renderRichText(props.data.contentfulContentBlog.body, options)}
         </div>
-        <div>Baca Lainnya</div>
       </div>
     </Container>
   )
