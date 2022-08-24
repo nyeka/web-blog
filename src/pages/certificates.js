@@ -6,7 +6,7 @@ import { Layout } from "../components/layout/layout"
 export default function Certificates() {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulCertificates {
+      allContentfulCertificates(sort: { order: DESC, fields: date }) {
         edges {
           node {
             date(formatString: "D MMMM, YYYY")

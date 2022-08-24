@@ -29,6 +29,10 @@ const Container = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
+  li {
+    list-style: none;
+  }
   h3 {
     color: #e8ecef;
   }

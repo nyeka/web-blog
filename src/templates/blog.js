@@ -5,6 +5,7 @@ import { Header } from "../components/About/header"
 import styled from "styled-components"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { Helmet } from "react-helmet"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export const query = graphql`
   query ($slug: String) {
@@ -14,6 +15,14 @@ export const query = graphql`
       subtitle
       body {
         raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            gatsbyImageData(width: 1000)
+            __typename
+            title
+          }
+        }
       }
       cover {
         url
@@ -40,6 +49,13 @@ export default function Blog(props) {
       [BLOCKS.HEADING_4]: (node, children) => (
         <h3 className="heading-4">{children}</h3>
       ),
+      [BLOCKS.OL_LIST]: (node, children) => (
+        <ol className="ol-list">{children}</ol>
+      ),
+      [BLOCKS.EMBEDDED_ASSET]: node => {
+        const { gatsbyImageData, title } = node.data.target
+        return <GatsbyImage image={getImage(gatsbyImageData)} alt={title} />
+      },
 
       [INLINES.HYPERLINK]: (node, children) => (
         <a href={node.data.uri} target="_blank" rel="noreferrer">
@@ -160,12 +176,36 @@ const Container = styled.div`
   color: white;
   font-family: "Poppins", sans-serif;
 
+  .ol-list {
+    margin: 24px;
+  }
+
   .parap {
-    margin: 12px 0;
+    margin: 24px 0;
+    color: #e8ecef;
+  }
+
+  .heading-4 {
+    color: #fff;
+    margin-bottom: 12px;
+    margin-top: 24px;
+    font-size: 24px;
   }
 
   .article-section {
+    color: #e8ecef;
     width: 783px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    span {
+      font-size: 12px;
+    }
+
+    img {
+      border-radius: 6px;
+    }
   }
 
   @media screen and (max-width: 1024px) {

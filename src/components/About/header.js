@@ -19,19 +19,32 @@ export const Header = () => {
               alt="ini gambar"
             />
             <div className="card-icon">
-              <a href="https://github.com/nyeka" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/nyeka"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <VscGithubInverted className="hvr-card hvr-bounce-in card-2" />
               </a>
-              <a href="https://www.instagram.com/_nyomaneka/" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.instagram.com/_nyomaneka/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <TbBrandInstagram className="hvr-card hvr-bounce-in card-2" />
               </a>
               <a
                 href="https://www.linkedin.com/in/nyoman-eka-swardita/"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
               >
                 <TiSocialLinkedinCircular className="hvr-card hvr-bounce-in card-2" />
               </a>
-              <a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <AiFillTwitterCircle className="hvr-card hvr-bounce-in card-2" />
               </a>
             </div>
@@ -42,7 +55,11 @@ export const Header = () => {
             First year Informatics Engineering student {""}
             <span>
               <u>
-                <a href="https://www.unila.ac.id" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.unila.ac.id"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Universitas Lampung
                 </a>
               </u>

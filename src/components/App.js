@@ -29,19 +29,21 @@ export default function App() {
         <div className="blog-content">
           {data.allContentfulContentBlog ? (
             data.allContentfulContentBlog.edges.map((datw, i) => {
-              console.log(datw.node.title.split(" ").join("-"))
               return (
-                <div className="card" key={i}>
-                  <Link to={`/${datw.node.slug}`}>
-                    <div className="card-blog hvr-sink">
-                      <img src={datw.node.cover.url} alt="ini gambar" />
-                      <div className="card-text">
-                        <p>{datw.node.date}</p>
-                        <h3>{datw.node.title}</h3>
-                        <p>{datw.node.subtitle}</p>
+                <div className="container hvr-sink" key={i}>
+                  <div className="card">
+                    <Link to={`/${datw.node.slug}`}>
+                      <div className="card-blog ">
+                        <img src={datw.node.cover.url} alt="ini gambar" />
+                        <div className="card-text">
+                          <p>{datw.node.date}</p>
+                          <h3>{datw.node.title}</h3>
+                          <p>{datw.node.subtitle}</p>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  </div>
+                  <span></span>
                 </div>
               )
             })
@@ -59,22 +61,46 @@ const Container = styled.div`
   display: flex;
   color: white;
 
-  .blog-content {
-    .card {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    span {
+      align-self: center;
+      width: 90%;
+      height: 2px;
+      background-color: #505558;
+      border-radius: 24px;
+    }
+    padding: 20px 8px;
+    border-radius: 19px;
+    margin-top: 12px;
+
+    :hover {
+      background-color: #313538;
+
       span {
-        width: 90%;
-        height: 2px;
-        background: #fff;
+        width: 100%;
+        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        animation-name: ganteng;
+        animation-duration: 0.5s;
       }
+    }
+  }
+  @keyframes ganteng {
+    0% {
+      transform: scaleX(0.95);
+    }
+
+    100% {
+      transform: scaleX(1);
     }
   }
 
   .card-blog {
     display: flex;
-    margin-top: 12px;
     flex-direction: row;
-    padding: 20px 8px;
-    border-radius: 19px;
+
     height: fit-content;
 
     img {
@@ -82,10 +108,6 @@ const Container = styled.div`
       height: 140px;
       border-radius: 9px;
       object-fit: cover;
-    }
-
-    :hover {
-      background-color: #505558;
     }
   }
 
