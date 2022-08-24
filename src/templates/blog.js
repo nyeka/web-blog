@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { Header } from "../components/About/header"
@@ -6,6 +6,7 @@ import styled from "styled-components"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { Helmet } from "react-helmet"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { BiArrowBack } from "react-icons/bi"
 
 export const query = graphql`
   query ($slug: String) {
@@ -151,17 +152,27 @@ export default function Blog(props) {
       <div className="header-contain">
         <Header />
       </div>
-      <div className="article-section">
-        <h2>{props.data.contentfulContentBlog.title}</h2>
-        <p>{props.data.contentfulContentBlog.subtitle}</p>
-        <span>Dipublikasikan pada {props.data.contentfulContentBlog.date}</span>
-        <img
-          src={props.data.contentfulContentBlog.cover.url}
-          style={{ width: "100%" }}
-          alt="ini gambar"
-        />
-        <div className="rich-text">
-          {renderRichText(props.data.contentfulContentBlog.body, options)}
+      <div className="content">
+        <Link to="/">
+          <nav>
+            {" "}
+            <BiArrowBack /> {props.data.contentfulContentBlog.title}
+          </nav>
+        </Link>
+        <div className="article-section">
+          <h2>{props.data.contentfulContentBlog.title}</h2>
+          <p>{props.data.contentfulContentBlog.subtitle}</p>
+          <span>
+            Dipublikasikan pada {props.data.contentfulContentBlog.date}
+          </span>
+          <img
+            src={props.data.contentfulContentBlog.cover.url}
+            style={{ width: "100%" }}
+            alt="ini gambar"
+          />
+          <div className="rich-text">
+            {renderRichText(props.data.contentfulContentBlog.body, options)}
+          </div>
         </div>
       </div>
     </Container>
@@ -179,6 +190,16 @@ const Container = styled.div`
     margin: 24px;
   }
 
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-contain {
+    padding: 14px;
+  }
+
   .parap {
     margin: 24px 0;
     color: #e8ecef;
@@ -191,12 +212,27 @@ const Container = styled.div`
     font-size: 24px;
   }
 
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #313538;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    gap: 24px;
+    height: 50px;
+  }
+
   .article-section {
     color: #e8ecef;
     width: 783px;
     display: flex;
     flex-direction: column;
     gap: 13px;
+    padding: 14px;
 
     span {
       font-size: 12px;
@@ -226,6 +262,16 @@ const Container = styled.div`
       margin-top: 3em;
       display: flex;
       justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    margin-top: 24px;
+  }
+
+  @media screen and (min-width: 568px) {
+    nav {
+      display: none;
     }
   }
 `
