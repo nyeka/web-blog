@@ -16,7 +16,7 @@ export const Header = () => {
             <img
               src={author}
               className="hvr-card hvr-bounce-out"
-              alt="ini gambar"
+              alt="Nyoman Eka Swardita"
             />
             <div className="card-icon">
               <a
@@ -55,7 +55,7 @@ export const Header = () => {
         </div>
         <div className="konten-desc">
           <p>
-            First year Informatics Engineering student {""}
+            Informatics Engineering student at {""}
             <span>
               <u>
                 <a
@@ -68,17 +68,16 @@ export const Header = () => {
               </u>
               .
             </span>{" "}
-            Frontend developer intern {""}
-            <span>
-              <u>
-                  TupaiTech
-              </u>
-              .
-            </span>{" "}
-            Interested in blockchain and smart contract development
+            Software developer and Interested in blockchain and smart contract
+            development
           </p>
         </div>
-        <div className="card-msg ">
+        <div
+          className="card-msg"
+          style={{
+            cursor: "pointer",
+          }}
+        >
           <a href="mailto:nyeka2101@gmail.com">Say Hi!</a>
         </div>
       </Container>

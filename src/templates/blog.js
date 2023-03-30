@@ -168,7 +168,7 @@ export default function Blog(props) {
           <img
             src={props.data.contentfulContentBlog.cover.url}
             style={{ width: "100%" }}
-            alt="ini gambar"
+            alt={props.data.contentfulContentBlog.title}
           />
           <div className="rich-text">
             {renderRichText(props.data.contentfulContentBlog.body, options)}
@@ -183,6 +183,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  background-color: #3e4346;
   color: white;
   font-family: "Poppins", sans-serif;
 
