@@ -71,17 +71,11 @@ export const Header = () => {
             Frontend developer intern {""}
             <span>
               <u>
-                <a
-                  href="https://www.tupaitech.net"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
                   TupaiTech
-                </a>
               </u>
               .
             </span>{" "}
-            Interested in Javascript ecosystem
+            Interested in blockchain and smart contract development
           </p>
         </div>
         <div className="card-msg ">
