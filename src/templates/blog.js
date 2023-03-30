@@ -157,7 +157,7 @@ export default function Blog(props) {
         <Link to="/">
           <nav>
             {" "}
-            <BiArrowBack /> {props.data.contentfulContentBlog.title}
+            <BiArrowBack size={18} /> {props.data.contentfulContentBlog.title}
           </nav>
         </Link>
         <div className="article-section">
@@ -186,8 +186,6 @@ const Container = styled.div`
   justify-content: space-evenly;
   color: white;
   font-family: "Poppins", sans-serif;
-
-
 
   .ol-list {
     margin: 24px;
