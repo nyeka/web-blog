@@ -7,6 +7,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { Helmet } from "react-helmet"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BiArrowBack } from "react-icons/bi"
+import "./style.css"
 
 export const query = graphql`
   query ($slug: String) {
@@ -183,9 +184,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: #3e4346;
   color: white;
   font-family: "Poppins", sans-serif;
+
+
 
   .ol-list {
     margin: 24px;
