@@ -6,9 +6,9 @@ export default function Portfo(props) {
     <Container>
       {props.data.allContentfulPortfolio.edges.map((datw, i) => {
         return (
-          <a href={datw.node.link} target="_blank" key={i}>
+          <a href={datw.node.link} target="_blank" key={i} rel="noreferrer">
             <div key={i} className="card-port">
-              <img src={datw.node.cover.url} alt="ini gambar" />
+              <img src={datw.node.cover.url} alt={datw.node.title} />
               <div className="card-text" key={i}>
                 <h3>{datw.node.title}</h3>
                 <p>{datw.node.subtitle}</p>

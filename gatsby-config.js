@@ -6,8 +6,7 @@ require("dotenv")
 module.exports = {
   siteMetadata: {
     title: `Nyoman Eka Swardita`,
-    description:
-      "Article of Informatics Student | made by Nyoman Eka Swardita (Frontend Developer Tupai Tech)",
+    description: "Article of Informatics Student | made by Nyoman Eka Swardita",
     author: `Nyoman Eka`,
   },
 

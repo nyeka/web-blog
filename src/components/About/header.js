@@ -24,7 +24,10 @@ export const Header = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <VscGithubInverted className="hvr-card hvr-bounce-in card-2" />
+                <VscGithubInverted
+                  className="hvr-card hvr-bounce-in card-2"
+                  size="24px"
+                />
               </a>
               <a
                 href="https://www.instagram.com/_nyomaneka/"

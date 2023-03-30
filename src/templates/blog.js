@@ -222,7 +222,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     font-size: 13px;
-    gap: 24px;
+    gap: 12px;
     height: 50px;
   }
 
